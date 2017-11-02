@@ -36,44 +36,44 @@ cgjs --help
 
 By default, `cgjs` includes `require` but it does not have any other module, including `process` and `console` module.
 
-To use other core modules, you need to install them a part via `npm install -g cgjs-module`.
+To use other core modules, you need to install them a part via `npm install -g @cgjs/module`.
 
 Following the list of core modules that are under development (contributors needed/welcome) and their current status:
 
-  - [ ] [assert](https://nodejs.org/api/assert.html) module as [cgjs-assert](https://github.com/cgjs/cgjs-assert)
-  - [ ] [buffer](https://nodejs.org/api/buffer.html) module as [cgjs-buffer](https://github.com/cgjs/cgjs-buffer)
-  - [ ] [child_process](https://nodejs.org/api/child_process.html) module as [cgjs-child_process](https://github.com/cgjs/cgjs-child_process)
-  - [ ] [cluster](https://nodejs.org/api/cluster.html) module as [cgjs-cluster](https://github.com/cgjs/cgjs-cluster)
-  - [ ] [console](https://nodejs.org/api/console.html) module as [cgjs-console](https://github.com/cgjs/cgjs-console)
-  - [ ] [crypto](https://nodejs.org/api/crypto.html) module as [cgjs-crypto](https://github.com/cgjs/cgjs-crypto)
-  - [ ] [dns](https://nodejs.org/api/dns.html) module as [cgjs-dns](https://github.com/cgjs/cgjs-dns)
-  - [ ] [domain](https://nodejs.org/api/domain.html) module as [cgjs-domain](https://github.com/cgjs/cgjs-domain)
-  - [ ] [events](https://nodejs.org/api/events.html) module as [cgjs-events](https://github.com/cgjs/cgjs-events)
-  - [ ] [fs](https://nodejs.org/api/fs.html) module as [cgjs-fs](https://github.com/cgjs/cgjs-fs)
-  - [ ] [http](https://nodejs.org/api/http.html) module as [cgjs-http](https://github.com/cgjs/cgjs-http)
-  - [ ] [http2](https://nodejs.org/api/http2.html) module as [cgjs-http2](https://github.com/cgjs/cgjs-http2)
-  - [ ] [https](https://nodejs.org/api/https.html) module as [cgjs-https](https://github.com/cgjs/cgjs-https)
-  - [ ] [module](https://nodejs.org/api/module.html) module as [cgjs-module](https://github.com/cgjs/cgjs-module)
-  - [ ] [net](https://nodejs.org/api/net.html) module as [cgjs-net](https://github.com/cgjs/cgjs-net)
-  - [ ] [os](https://nodejs.org/api/os.html) module as [cgjs-os](https://github.com/cgjs/cgjs-os)
-  - [ ] [path](https://nodejs.org/api/path.html) module as [cgjs-path](https://github.com/cgjs/cgjs-path)
-  - [ ] [process](https://nodejs.org/api/process.html) module as [cgjs-process](https://github.com/cgjs/cgjs-process)
-  - [ ] [querystring](https://nodejs.org/api/querystring.html) module as [cgjs-querystring](https://github.com/cgjs/cgjs-querystring)
-  - [ ] [readline](https://nodejs.org/api/readline.html) module as [cgjs-readline](https://github.com/cgjs/cgjs-readline)
-  - [ ] [repl](https://nodejs.org/api/repl.html) module as [cgjs-repl](https://github.com/cgjs/cgjs-repl)
-  - [ ] [stream](https://nodejs.org/api/stream.html) module as [cgjs-stream](https://github.com/cgjs/cgjs-stream)
-  - [ ] [string_decoder](https://nodejs.org/api/string_decoder.html) module as [cgjs-string_decoder](https://github.com/cgjs/cgjs-string_decoder)
-  - [x] [timers](https://nodejs.org/api/timers.html) module as [cgjs-timers](https://github.com/cgjs/cgjs-timers)
-  - [ ] [tls](https://nodejs.org/api/tls.html) module as [cgjs-tls](https://github.com/cgjs/cgjs-tls)
-  - [ ] [tty](https://nodejs.org/api/tty.html) module as [cgjs-tty](https://github.com/cgjs/cgjs-tty)
-  - [ ] [dgram](https://nodejs.org/api/dgram.html) module as [cgjs-dgram](https://github.com/cgjs/cgjs-dgram)
-  - [ ] [url](https://nodejs.org/api/url.html) module as [cgjs-url](https://github.com/cgjs/cgjs-url)
-  - [ ] [util](https://nodejs.org/api/util.html) module as [cgjs-util](https://github.com/cgjs/cgjs-util)
-  - [ ] [vm](https://nodejs.org/api/vm.html) module as [cgjs-vm](https://github.com/cgjs/cgjs-vm)
-  - [ ] [zlib](https://nodejs.org/api/zlib.html) module as [cgjs-zlib](https://github.com/cgjs/cgjs-zlib)
+  - [ ] [assert](https://nodejs.org/api/assert.html) module as [@cgjs/assert](https://github.com/cgjs/assert)
+  - [ ] [buffer](https://nodejs.org/api/buffer.html) module as [@cgjs/buffer](https://github.com/cgjs/buffer)
+  - [ ] [child_process](https://nodejs.org/api/child_process.html) module as [@cgjs/child_process](https://github.com/cgjs/child_process)
+  - [ ] [cluster](https://nodejs.org/api/cluster.html) module as [@cgjs/cluster](https://github.com/cgjs/cluster)
+  - [ ] [console](https://nodejs.org/api/console.html) module as [@cgjs/console](https://github.com/cgjs/console)
+  - [ ] [crypto](https://nodejs.org/api/crypto.html) module as [@cgjs/crypto](https://github.com/cgjs/crypto)
+  - [ ] [dns](https://nodejs.org/api/dns.html) module as [@cgjs/dns](https://github.com/cgjs/dns)
+  - [ ] [domain](https://nodejs.org/api/domain.html) module as [@cgjs/domain](https://github.com/cgjs/domain)
+  - [ ] [events](https://nodejs.org/api/events.html) module as [@cgjs/events](https://github.com/cgjs/events)
+  - [ ] [fs](https://nodejs.org/api/fs.html) module as [@cgjs/fs](https://github.com/cgjs/fs)
+  - [ ] [http](https://nodejs.org/api/http.html) module as [@cgjs/http](https://github.com/cgjs/http)
+  - [ ] [http2](https://nodejs.org/api/http2.html) module as [@cgjs/http2](https://github.com/cgjs/http2)
+  - [ ] [https](https://nodejs.org/api/https.html) module as [@cgjs/https](https://github.com/cgjs/https)
+  - [ ] [module](https://nodejs.org/api/module.html) module as [@cgjs/module](https://github.com/cgjs/module)
+  - [ ] [net](https://nodejs.org/api/net.html) module as [@cgjs/net](https://github.com/cgjs/net)
+  - [ ] [os](https://nodejs.org/api/os.html) module as [@cgjs/os](https://github.com/cgjs/os)
+  - [ ] [path](https://nodejs.org/api/path.html) module as [@cgjs/path](https://github.com/cgjs/path)
+  - [ ] [process](https://nodejs.org/api/process.html) module as [@cgjs/process](https://github.com/cgjs/process)
+  - [ ] [querystring](https://nodejs.org/api/querystring.html) module as [@cgjs/querystring](https://github.com/cgjs/querystring)
+  - [ ] [readline](https://nodejs.org/api/readline.html) module as [@cgjs/readline](https://github.com/cgjs/readline)
+  - [ ] [repl](https://nodejs.org/api/repl.html) module as [@cgjs/repl](https://github.com/cgjs/repl)
+  - [ ] [stream](https://nodejs.org/api/stream.html) module as [@cgjs/stream](https://github.com/cgjs/stream)
+  - [ ] [string_decoder](https://nodejs.org/api/string_decoder.html) module as [@cgjs/string_decoder](https://github.com/cgjs/string_decoder)
+  - [x] [timers](https://nodejs.org/api/timers.html) module as [@cgjs/timers](https://github.com/cgjs/timers)
+  - [ ] [tls](https://nodejs.org/api/tls.html) module as [@cgjs/tls](https://github.com/cgjs/tls)
+  - [ ] [tty](https://nodejs.org/api/tty.html) module as [@cgjs/tty](https://github.com/cgjs/tty)
+  - [ ] [dgram](https://nodejs.org/api/dgram.html) module as [@cgjs/dgram](https://github.com/cgjs/dgram)
+  - [ ] [url](https://nodejs.org/api/url.html) module as [@cgjs/url](https://github.com/cgjs/url)
+  - [ ] [util](https://nodejs.org/api/util.html) module as [@cgjs/util](https://github.com/cgjs/util)
+  - [ ] [vm](https://nodejs.org/api/vm.html) module as [@cgjs/vm](https://github.com/cgjs/vm)
+  - [ ] [zlib](https://nodejs.org/api/zlib.html) module as [@cgjs/zlib](https://github.com/cgjs/zlib)
 
 ### Why no `process` and `console` too ?
 
-As soon as both [cgjs-process](https://github.com/cgjs/cgjs-process) and [cgjs-console](https://github.com/cgjs/cgjs-console) will be available I will make an exception to the rule and bring in them to fully simulate a CommonJS environment.
+As soon as both [@cgjs/process](https://github.com/cgjs/process) and [@cgjs/console](https://github.com/cgjs/console) will be available I will make an exception to the rule and bring in them to fully simulate a CommonJS environment.
 
 Unfortunately, having a 1:1 NodeJS behavior with both `process` and `console` is not as trivial as it looks like but then again, if these will be fairly usable then these will be included together with core `cgjs`.
