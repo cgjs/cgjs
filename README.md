@@ -63,7 +63,7 @@ Following the list of core modules that are under development (contributors need
   - [ ] [repl](https://nodejs.org/api/repl.html) module as [cgjs-repl](https://github.com/WebReflection/cgjs-repl)
   - [ ] [stream](https://nodejs.org/api/stream.html) module as [cgjs-stream](https://github.com/WebReflection/cgjs-stream)
   - [ ] [string_decoder](https://nodejs.org/api/string_decoder.html) module as [cgjs-string_decoder](https://github.com/WebReflection/cgjs-string_decoder)
-  - [ ] [timers](https://nodejs.org/api/timers.html) module as [cgjs-timers](https://github.com/WebReflection/cgjs-timers)
+  - [x] [timers](https://nodejs.org/api/timers.html) module as [cgjs-timers](https://github.com/WebReflection/cgjs-timers)
   - [ ] [tls](https://nodejs.org/api/tls.html) module as [cgjs-tls](https://github.com/WebReflection/cgjs-tls)
   - [ ] [tty](https://nodejs.org/api/tty.html) module as [cgjs-tty](https://github.com/WebReflection/cgjs-tty)
   - [ ] [dgram](https://nodejs.org/api/dgram.html) module as [cgjs-dgram](https://github.com/WebReflection/cgjs-dgram)
@@ -76,4 +76,4 @@ Following the list of core modules that are under development (contributors need
 
 As soon as both [cgjs-process](https://github.com/WebReflection/cgjs-process) and [cgjs-console](https://github.com/WebReflection/cgjs-console) will be available I will make an exception to the rule and bring in them to fully simulate a CommonJS environment.
 
-Unfortunately, having a 1:1 NodeJS behavior with both `process` and `console` is not as trivial as it looks like but then agan, if these will be fairly usable thse will be included together with core `cgjs`.
+Unfortunately, having a 1:1 NodeJS behavior with both `process` and `console` is not as trivial as it looks like but then agan, if these will be fairly usable then these will be included together with core `cgjs`.
