@@ -2,7 +2,9 @@
   "name": "cgjs",
   "version": "0.0.2",
   "description": "A CommonJS Runtime for GJS",
-  "bin": "cg.js",
+  "bin": {
+    "cgjs": "cg.js"
+  },
   "scripts": {},
   "keywords": [
     "gjs",
@@ -14,5 +16,14 @@
     "native"
   ],
   "author": "Andrea Giammarchi",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "cg.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/cgjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/cgjs/issues"
+  },
+  "homepage": "https://github.com/WebReflection/cgjs#readme"
 }

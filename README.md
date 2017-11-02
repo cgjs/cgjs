@@ -7,16 +7,16 @@ A CommonJS Runtime for GJS
 Differently from [jsgtk](https://github.com/WebReflection/jsgtk), this project has the following goals and features:
 
   * 100% based on GJS. No wrapping, no runtime transpilation, pure ECMAScript 2015+ via SpiderMonkey 52+
-  * native _camelCase_ methods are provided only on demand and if needed. You are free to `require("Gtk")` or use GJS `imports.gi.Gtk` instead.
+  * Gtk _camelCase_ methods are provided only on demand and if needed. You are free to `require('Gtk')`, which will add _camelCase_ method, or just recular GJS `imports.gi.Gtk`, suggested to develop core modules too.
   * by default, the core brings in only most basic features to develop CommonJS modules for GJS:
     * a `global` reference to the shared global GJS object
-    * globally available timers such `setImmediate(fn, ...args)`, `setInterval(fn, delay, ...args)`, `setTimeout(fn, delay, ...args)` with also their `clear...()` counter functions
+    * globally available timers such `setImmediate(fn, ...args)`, `setInterval(fn, delay, ...args)`, `setTimeout(fn, delay, ...args)` with also their `clearImmediate/Interval/Timeout(id)` counter functions
     * a spec compliant `require` function with `require.cache` and a `require.resolve` implemented via the [proper algorithm](https://nodejs.org/api/modules.html#modules_all_together)
   * each core module is developed a part:
     * easier to maintain
     * easier to update
     * easier to track changes
-    * easier to also contribute
+    * easier to also contribute 🎉
 
 ### Core Installation
 
@@ -34,7 +34,7 @@ cgjs --help
 
 ### CommonJS Modules
 
-By default, `cgjs` **includes** the CommonJS runtime based on `require`, but it does not have `process` and `console` module.
+By default, `cgjs` includes `require` but it does not have any other module, including `process` and `console` module.
 
 To use other core modules, you need to install them a part via `npm install -g cgjs-module`.
 
