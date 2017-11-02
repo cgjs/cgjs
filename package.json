@@ -20,10 +20,10 @@
   "main": "cg.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebReflection/cgjs.git"
+    "url": "git+https://github.com/cgjs/cgjs.git"
   },
   "bugs": {
-    "url": "https://github.com/WebReflection/cgjs/issues"
+    "url": "https://github.com/cgjs/cgjs/issues"
   },
-  "homepage": "https://github.com/WebReflection/cgjs#readme"
+  "homepage": "https://github.com/cgjs/cgjs#readme"
 }
