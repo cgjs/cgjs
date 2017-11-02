@@ -76,4 +76,4 @@ Following the list of core modules that are under development (contributors need
 
 As soon as both [cgjs-process](https://github.com/cgjs/cgjs-process) and [cgjs-console](https://github.com/cgjs/cgjs-console) will be available I will make an exception to the rule and bring in them to fully simulate a CommonJS environment.
 
-Unfortunately, having a 1:1 NodeJS behavior with both `process` and `console` is not as trivial as it looks like but then agan, if these will be fairly usable then these will be included together with core `cgjs`.
+Unfortunately, having a 1:1 NodeJS behavior with both `process` and `console` is not as trivial as it looks like but then again, if these will be fairly usable then these will be included together with core `cgjs`.
