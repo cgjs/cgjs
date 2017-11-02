@@ -34,7 +34,7 @@
       default:
         const open = '\uD83C\uDF88', close = '\uD83C\uDF89';
         print(`
-          \x1B[1m${info.name}\x1B[0m ${info.version} \x1B[2mby ${info.author}\x1B[0m
+          \x1B[1m${info.name}\x1B[0m ${info.version} \x1B[2mby ${info.author.name || info.author}\x1B[0m
 
          \x1B[2m┌───────────────────────────────────┐\x1B[0m
          \x1B[2m│\x1B[0m ${open} ${info.description} ${close}  \x1B[2m│\x1B[0m
