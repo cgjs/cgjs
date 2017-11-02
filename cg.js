@@ -26,7 +26,6 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   const File = gi.Gio.File;
   const PROGRAM_EXE = File.new_for_path(GLib.get_current_dir())
                           .resolve_relative_path(imports.system.programInvocationName);
-  const DIR_SEPARATOR = /^\//.test(PROGRAM_EXE) ? '/' : '\\';
   const PROGRAM_DIR = getProgramDir(PROGRAM_EXE.get_parent());
 
   // append project folder (needed to imports.cgjs)
@@ -41,7 +40,7 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
       // enable some debugging flag
       DEBUG: {value: ARGV.some(arg => arg === '--debug')},
       // the directory separator
-      DIR_SEPARATOR: {value: DIR_SEPARATOR},
+      DIR_SEPARATOR: {value: /^\//.test(PROGRAM_EXE) ? '/' : '\\'},
       // frequency to check for running timers (interval, immediate, timeouts)
       IDLE: {value: ARGV.some(arg => /^--idle=(\d+)/.test(arg)) ? (+RegExp.$1 || 1) : 33},
       // list of all available Gtk namespaces
@@ -58,7 +57,6 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   // bootstrap the environment
   imports.cgjs.globals;
   imports.cgjs.require;
-  imports.cgjs.camel;
 
   // execute the program
   imports.cgjs.program;
