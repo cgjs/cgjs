@@ -45,7 +45,7 @@ Following the list of core modules that are under development (contributors need
   - [ ] [child_process](https://nodejs.org/api/child_process.html) module as [cgjs-child_process](https://github.com/WebReflection/cgjs-child_process)
   - [ ] [cluster](https://nodejs.org/api/cluster.html) module as [cgjs-cluster](https://github.com/WebReflection/cgjs-cluster)
   - [ ] [console](https://nodejs.org/api/console.html) module as [cgjs-console](https://github.com/WebReflection/cgjs-console)
-  - [ ] [crypto](https://nodejs.org/api/buffer.html) module as [cgjs-buffer](https://github.com/WebReflection/cgjs-buffer)
+  - [ ] [crypto](https://nodejs.org/api/crypto.html) module as [cgjs-crypto](https://github.com/WebReflection/cgjs-crypto)
   - [ ] [dns](https://nodejs.org/api/dns.html) module as [cgjs-dns](https://github.com/WebReflection/cgjs-dns)
   - [ ] [domain](https://nodejs.org/api/domain.html) module as [cgjs-domain](https://github.com/WebReflection/cgjs-domain)
   - [ ] [events](https://nodejs.org/api/events.html) module as [cgjs-events](https://github.com/WebReflection/cgjs-events)
