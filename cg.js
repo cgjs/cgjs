@@ -40,7 +40,7 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
       // enable some debugging flag
       DEBUG: {value: ARGV.some(arg => arg === '--debug')},
       // the directory separator
-      DIR_SEPARATOR: {value: /^\//.test(PROGRAM_EXE) ? '/' : '\\'},
+      PATH_SEPARATOR: {value: /^\//.test(PROGRAM_EXE) ? '/' : '\\'},
       // frequency to check for running timers (interval, immediate, timeouts)
       IDLE: {value: ARGV.some(arg => /^--idle=(\d+)/.test(arg)) ? (+RegExp.$1 || 1) : 33},
       // list of all available Gtk namespaces
@@ -65,7 +65,10 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   function getProgramDir(dir) {
     switch (dir.get_basename()) {
       case 'bin':
-        return dir.get_parent().resolve_relative_path('./lib/node_modules/cgjs').get_path();
+        return ['lib', 'node_modules', 'cgjs'].reduce(
+          (dir, path) => dir.resolve_relative_path(path),
+          dir.get_parent()
+        ).get_path();
       case '.bin':
         return dir.get_parent().resolve_relative_path('cgjs').get_path();
       default:
