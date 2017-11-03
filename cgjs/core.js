@@ -9,9 +9,9 @@
     // {name: 'path'},
   ].forEach(
     function (module) {
-      const path = ['node_modules', '@cgjs', module.name].reduce(
+      const path = ['@cgjs', module.name].reduce(
         (dir, path) => dir.resolve_relative_path(path),
-        this
+        this.get_parent()
       ).get_path();
       require.register(module.name, require(path));
       if (module.global) {
