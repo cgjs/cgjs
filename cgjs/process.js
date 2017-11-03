@@ -14,11 +14,12 @@
       dir.resolve_relative_path(arg).get_path()
   ));
 
-  const env = {};
-  GLib.get_environ().forEach(info => {
-    const i = info.indexOf('=');
-    env[info.slice(0, i)] = info.slice(i + 1);
-  });
-  this.env = env;
+  this.env = GLib.listenv().reduce(
+    (env, key) => {
+      env[key] = GLib.getenv(key);
+      return env;
+    },
+    {}
+  );
 
 })(imports.gi);
