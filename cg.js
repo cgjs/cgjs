@@ -26,7 +26,7 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   const File = gi.Gio.File;
   const PROGRAM_EXE = File.new_for_path(GLib.get_current_dir())
                           .resolve_relative_path(imports.system.programInvocationName);
-  const PROGRAM_DIR = getProgramDir(PROGRAM_EXE.get_parent());
+  const PROGRAM_DIR = getProgramDir(PROGRAM_EXE.get_parent()).get_path();
 
   // append project folder (needed to imports.cgjs)
   imports.searchPath.push(PROGRAM_DIR);
@@ -57,6 +57,7 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   // bootstrap the environment
   imports.cgjs.globals;
   imports.cgjs.require;
+  imports.cgjs.core;
 
   // execute the program
   imports.cgjs.program;
@@ -68,11 +69,11 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
         return ['lib', 'node_modules', 'cgjs'].reduce(
           (dir, path) => dir.resolve_relative_path(path),
           dir.get_parent()
-        ).get_path();
+        );
       case '.bin':
-        return dir.get_parent().resolve_relative_path('cgjs').get_path();
+        return dir.get_parent().resolve_relative_path('cgjs');
       default:
-        return dir.get_path();
+        return dir;
     }
   }
 

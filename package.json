@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/cgjs/cgjs/issues"
   },
-  "homepage": "https://github.com/cgjs/cgjs#readme"
+  "homepage": "https://github.com/cgjs/cgjs#readme",
+  "dependencies": {
+    "@cgjs/console": "^0.1.1"
+  }
 }
