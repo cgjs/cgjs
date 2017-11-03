@@ -1,5 +1,6 @@
 (() => {
   /*! (c) 2017 Andrea Giammarchi - @WebReflection (ISC) */
+  const path = (dir, path) => dir.resolve_relative_path(path);
   [
     // console and process should have priority
     {name: 'console', global: true},
@@ -9,11 +10,24 @@
     // {name: 'path'},
   ].forEach(
     function (module) {
-      const path = ['@cgjs', module.name].reduce(
-        (dir, path) => dir.resolve_relative_path(path),
-        this.get_parent()
-      ).get_path();
-      require.register(module.name, require(path));
+      const included = ['node_modules', '@cgjs', module.name].reduce(path, this);
+      const outside = ['@cgjs', module.name].reduce(path, this.get_parent());
+      switch (true) {
+        case included.query_exists(null):
+          require.register(module.name, require(included.get_path()));
+          break;
+        case outside.query_exists(null):
+          require.register(module.name, require(outside.get_path()));
+          break;
+        default:
+          throw new Error(
+            `unable to find ${module.name}
+            ${included.get_path()}
+            ${outside.get_path()}`
+            .replace(/^\s+/gm, '')
+          );
+          break;
+      }
       if (module.global) {
         global[module.name] = require(module.name);
       }
