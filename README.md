@@ -68,7 +68,7 @@ Following the list of core modules that are under development (contributors need
   - [ ] [tty](https://nodejs.org/api/tty.html) module as [@cgjs/tty](https://github.com/cgjs/tty)
   - [ ] [dgram](https://nodejs.org/api/dgram.html) module as [@cgjs/dgram](https://github.com/cgjs/dgram)
   - [ ] [url](https://nodejs.org/api/url.html) module as [@cgjs/url](https://github.com/cgjs/url)
-  - [ ] [util](https://nodejs.org/api/util.html) module as [@cgjs/util](https://github.com/cgjs/util)
+  - [x] [util](https://nodejs.org/api/util.html) module as [@cgjs/util](https://github.com/cgjs/util)
   - [ ] [vm](https://nodejs.org/api/vm.html) module as [@cgjs/vm](https://github.com/cgjs/vm)
   - [ ] [zlib](https://nodejs.org/api/zlib.html) module as [@cgjs/zlib](https://github.com/cgjs/zlib)
 
