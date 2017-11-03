@@ -9,10 +9,7 @@
     // WARNING: core modules order matters !!!
     {name: 'util', global: true},
     {name: 'console', global: true},
-    // {name: 'process', global: true},
-    // others might land soon in core too
-    // {name: 'fs'},
-    // {name: 'path'},
+    {name: 'timers'},
   ].forEach(
     function (module) {
       const included = ['node_modules', '@cgjs', module.name].reduce(path, this);
