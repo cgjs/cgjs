@@ -15,6 +15,4 @@
       value: global.value
     });
   });
-})(
-  imports.cgjs.timers
-);
+})(imports.cgjs.timers);
