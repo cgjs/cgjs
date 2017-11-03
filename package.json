@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/cgjs/cgjs#readme",
   "dependencies": {
-    "@cgjs/console": "^0.1.1"
+    "@cgjs/console": "^0.1.2",
+    "@cgjs/util": "^0.1.0",
+    "console": "^0.5.2"
   }
 }

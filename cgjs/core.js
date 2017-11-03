@@ -1,5 +1,9 @@
-(() => {
+(globalRequire => {
   /*! (c) 2017 Andrea Giammarchi - @WebReflection (ISC) */
+  this.module = (require, module) => module in globalRequire.cache ?
+      globalRequire(module) :
+      require(`@cgjs/${name}`);
+
   const path = (dir, path) => dir.resolve_relative_path(path);
   [
     // WARNING: core modules order matters !!!
@@ -38,10 +42,4 @@
     )
   );
 
-  const globalRequire = require;
-  this.module = (require, module) =>
-    module in globalRequire.cache ?
-      globalRequire(module) :
-      require(`@cgjs/${name}`);
-
-})();
+})(require);
