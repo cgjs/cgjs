@@ -34,7 +34,7 @@ cgjs --help
 
 ### CommonJS Modules
 
-By default, `cgjs` includes `require` but it does not have any other module, including `process` and `console` module.
+By default, `cgjs` includes `require` but it does not have all other modules.
 
 To use other core modules, you need to install them a part via `npm install -g @cgjs/module`.
 
@@ -44,7 +44,7 @@ Following the list of core modules that are under development (contributors need
   - [ ] [buffer](https://nodejs.org/api/buffer.html) module as [@cgjs/buffer](https://github.com/cgjs/buffer)
   - [ ] [child_process](https://nodejs.org/api/child_process.html) module as [@cgjs/child_process](https://github.com/cgjs/child_process)
   - [ ] [cluster](https://nodejs.org/api/cluster.html) module as [@cgjs/cluster](https://github.com/cgjs/cluster)
-  - [ ] [console](https://nodejs.org/api/console.html) module as [@cgjs/console](https://github.com/cgjs/console)
+  - [x] [console](https://nodejs.org/api/console.html) module as [@cgjs/console](https://github.com/cgjs/console)
   - [ ] [crypto](https://nodejs.org/api/crypto.html) module as [@cgjs/crypto](https://github.com/cgjs/crypto)
   - [ ] [dns](https://nodejs.org/api/dns.html) module as [@cgjs/dns](https://github.com/cgjs/dns)
   - [ ] [domain](https://nodejs.org/api/domain.html) module as [@cgjs/domain](https://github.com/cgjs/domain)
@@ -72,8 +72,6 @@ Following the list of core modules that are under development (contributors need
   - [ ] [vm](https://nodejs.org/api/vm.html) module as [@cgjs/vm](https://github.com/cgjs/vm)
   - [ ] [zlib](https://nodejs.org/api/zlib.html) module as [@cgjs/zlib](https://github.com/cgjs/zlib)
 
-### Why no `process` and `console` too ?
+### Where is the `process` ?
 
-As soon as both [@cgjs/process](https://github.com/cgjs/process) and [@cgjs/console](https://github.com/cgjs/console) will be available I will make an exception to the rule and bring in them to fully simulate a CommonJS environment.
-
-Unfortunately, having a 1:1 NodeJS behavior with both `process` and `console` is not as trivial as it looks like but then again, if these will be fairly usable then these will be included together with core `cgjs`.
+Unfortunately, having a 1:1 NodeJS behavior with `process` is not as trivial as it looks like as soon as [@cgjs/process](https://github.com/cgjs/process) will be usable I'll ship it together with the core.
