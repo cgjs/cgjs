@@ -1,4 +1,4 @@
-((core, timers) => {
+(timers => {
   /*! (c) 2017 Andrea Giammarchi - @WebReflection (ISC) */
   [
     {name: 'clearImmediate', value: timers.clearImmediate},
@@ -16,6 +16,5 @@
     });
   });
 })(
-  imports.cgjs.constants.CORE_MODULES,
   imports.cgjs.timers
 );
