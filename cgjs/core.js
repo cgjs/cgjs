@@ -2,7 +2,8 @@
   /*! (c) 2017 Andrea Giammarchi - @WebReflection (ISC) */
   const path = (dir, path) => dir.resolve_relative_path(path);
   [
-    // console and process should have priority
+    // WARNING: core modules order matters !!!
+    {name: 'util', global: true},
     {name: 'console', global: true},
     // {name: 'process', global: true},
     // others might land soon in core too
@@ -36,4 +37,11 @@
       imports.cgjs.constants.PROGRAM_DIR
     )
   );
+
+  const globalRequire = require;
+  this.module = (require, module) =>
+    module in globalRequire.cache ?
+      globalRequire(module) :
+      require(`@cgjs/${name}`);
+
 })();
