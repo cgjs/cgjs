@@ -9,6 +9,7 @@
     // WARNING: core modules order matters !!!
     //          Modules without other core modules dependencies
     //          should be defined on top to be available to the rest of the core.
+    {name: 'buffer'},
     {name: 'events'},
     {name: 'path'},
     {name: 'timers'},

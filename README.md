@@ -42,7 +42,7 @@ To use other core modules, you need to install them a part via `npm install -g @
 Following the list of core modules that are under development (contributors needed/welcome) and their current status:
 
   - [ ] [assert](https://nodejs.org/api/assert.html) module as [@cgjs/assert](https://github.com/cgjs/assert)
-  - [ ] [buffer](https://nodejs.org/api/buffer.html) module as [@cgjs/buffer](https://github.com/cgjs/buffer)
+  - [x] [buffer](https://nodejs.org/api/buffer.html) module as [@cgjs/buffer](https://github.com/cgjs/buffer)
   - [ ] [child_process](https://nodejs.org/api/child_process.html) module as [@cgjs/child_process](https://github.com/cgjs/child_process)
   - [ ] [cluster](https://nodejs.org/api/cluster.html) module as [@cgjs/cluster](https://github.com/cgjs/cluster)
   - [x] [console](https://nodejs.org/api/console.html) module as [@cgjs/console](https://github.com/cgjs/console)
