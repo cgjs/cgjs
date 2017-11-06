@@ -55,13 +55,16 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
     }
   );
 
-  // bootstrap the environment
-  imports.cgjs.globals;
-  imports.cgjs.require;
-  imports.cgjs.core;
+  [
+    // bootstrap the environment
+    'globals',
+    'require',
+    'core',
 
-  // execute the program
-  imports.cgjs.program;
+    // execute the program
+    'program'
+
+  ].forEach(resource => imports.cgjs[resource]);
 
   // basic utility for this scope
   function getProgramDir(dir) {
