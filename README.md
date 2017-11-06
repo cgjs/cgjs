@@ -56,7 +56,7 @@ Following the list of core modules that are under development (contributors need
   - [ ] [module](https://nodejs.org/api/module.html) module as [@cgjs/module](https://github.com/cgjs/module)
   - [ ] [net](https://nodejs.org/api/net.html) module as [@cgjs/net](https://github.com/cgjs/net)
   - [ ] [os](https://nodejs.org/api/os.html) module as [@cgjs/os](https://github.com/cgjs/os)
-  - [ ] [path](https://nodejs.org/api/path.html) module as [@cgjs/path](https://github.com/cgjs/path)
+  - [x] [path](https://nodejs.org/api/path.html) module as [@cgjs/path](https://github.com/cgjs/path)
   - [ ] [process](https://nodejs.org/api/process.html) module as [@cgjs/process](https://github.com/cgjs/process)
   - [ ] [querystring](https://nodejs.org/api/querystring.html) module as [@cgjs/querystring](https://github.com/cgjs/querystring)
   - [ ] [readline](https://nodejs.org/api/readline.html) module as [@cgjs/readline](https://github.com/cgjs/readline)

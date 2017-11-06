@@ -2,14 +2,16 @@
   /*! (c) 2017 Andrea Giammarchi - @WebReflection (ISC) */
   this.module = (require, module) => module in globalRequire.cache ?
       globalRequire(module) :
-      require(`@cgjs/${name}`);
+      require(`@cgjs/${module}`);
 
   const path = (dir, path) => dir.resolve_relative_path(path);
   [
     // WARNING: core modules order matters !!!
-    {name: 'util', global: true},
-    {name: 'console', global: true},
+    //          Modules without other core modules dependencies on top
+    {name: 'path'},
     {name: 'timers'},
+    {name: 'util'},
+    {name: 'console', global: true}
   ].forEach(
     function (module) {
       const included = ['node_modules', '@cgjs', module.name].reduce(path, this);
