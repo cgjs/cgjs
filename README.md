@@ -12,6 +12,7 @@ Differently from [jsgtk](https://github.com/WebReflection/jsgtk), this project h
     * a `global` reference to the shared global GJS object
     * globally available timers such `setImmediate(fn, ...args)`, `setInterval(fn, delay, ...args)`, `setTimeout(fn, delay, ...args)` with also their `clearImmediate/Interval/Timeout(id)` counter functions
     * a spec compliant `require` function with `require.cache` and a `require.resolve` implemented via the [proper algorithm](https://nodejs.org/api/modules.html#modules_all_together)
+  * all other core modules will be made available as soon as available
   * each core module is developed a part:
     * easier to maintain
     * easier to update
@@ -47,8 +48,7 @@ Following the list of core modules that are under development (contributors need
   - [x] [console](https://nodejs.org/api/console.html) module as [@cgjs/console](https://github.com/cgjs/console)
   - [ ] [crypto](https://nodejs.org/api/crypto.html) module as [@cgjs/crypto](https://github.com/cgjs/crypto)
   - [ ] [dns](https://nodejs.org/api/dns.html) module as [@cgjs/dns](https://github.com/cgjs/dns)
-  - [ ] [domain](https://nodejs.org/api/domain.html) module as [@cgjs/domain](https://github.com/cgjs/domain)
-  - [ ] [events](https://nodejs.org/api/events.html) module as [@cgjs/events](https://github.com/cgjs/events)
+  - [x] [events](https://nodejs.org/api/events.html) module as [@cgjs/events](https://github.com/cgjs/events)
   - [ ] [fs](https://nodejs.org/api/fs.html) module as [@cgjs/fs](https://github.com/cgjs/fs)
   - [ ] [http](https://nodejs.org/api/http.html) module as [@cgjs/http](https://github.com/cgjs/http)
   - [ ] [http2](https://nodejs.org/api/http2.html) module as [@cgjs/http2](https://github.com/cgjs/http2)
@@ -75,3 +75,9 @@ Following the list of core modules that are under development (contributors need
 ### Where is the `process` ?
 
 Unfortunately, having a 1:1 NodeJS behavior with `process` is not as trivial as it looks like as soon as [@cgjs/process](https://github.com/cgjs/process) will be usable I'll ship it together with the core.
+
+### Basic GJS info
+
+You can install globally the [cgjs-about](https://github.com/cgjs/cgjs-about) utility and query it as described in the repository.
+
+Together with `grep` it's a great way to have a quick overview of every namespace.
