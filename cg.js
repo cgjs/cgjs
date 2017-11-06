@@ -24,7 +24,8 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
 
   const GLib = gi.GLib;
   const File = gi.Gio.File;
-  const PROGRAM_EXE = File.new_for_path(GLib.get_current_dir())
+  const CURRENT_DIR = GLib.get_current_dir();
+  const PROGRAM_EXE = File.new_for_path(CURRENT_DIR)
                           .resolve_relative_path(imports.system.programInvocationName);
   const PROGRAM_DIR = getProgramDir(PROGRAM_EXE.get_parent()).get_path();
 
@@ -40,7 +41,7 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
       // enable some debugging flag
       DEBUG: {value: ARGV.some(arg => arg === '--debug')},
       // the directory separator
-      PATH_SEPARATOR: {value: /^\//.test(PROGRAM_EXE) ? '/' : '\\'},
+      PATH_SEPARATOR: {value: /^\//.test(CURRENT_DIR) ? '/' : '\\'},
       // frequency to check for running timers (interval, immediate, timeouts)
       IDLE: {value: ARGV.some(arg => /^--idle=(\d+)/.test(arg)) ? (+RegExp.$1 || 1) : 33},
       // list of all available Gtk namespaces
