@@ -11,6 +11,7 @@
     //          should be defined on top to be available to the rest of the core.
     {name: 'buffer'},
     {name: 'events'},
+    {name: 'os'},
     {name: 'path'},
     {name: 'timers'},
     {name: 'util'},
