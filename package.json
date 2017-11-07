@@ -5,7 +5,9 @@
   "bin": {
     "cgjs": "cg.js"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "./cg.js && echo $(tput bold)'  OK'$(tput sgr0) && echo ''"
+  },
   "keywords": [
     "gjs",
     "require",
@@ -27,6 +29,7 @@
   },
   "homepage": "https://github.com/cgjs/cgjs#readme",
   "dependencies": {
+    "@cgjs/assert": "0.0.1",
     "@cgjs/buffer": "^0.1.0",
     "@cgjs/console": "^0.1.2",
     "@cgjs/events": "^0.1.0",
