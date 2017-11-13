@@ -1,6 +1,6 @@
 {
   "name": "cgjs",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "A CommonJS Runtime for GJS",
   "bin": {
     "cgjs": "cg.js"
