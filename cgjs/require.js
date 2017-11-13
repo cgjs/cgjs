@@ -59,7 +59,7 @@ Object.defineProperty(
                 'require',
                 '__dirname',
                 '__filename',
-                content
+                content.toString().replace(/^#!.+[\r\n]+/, '')
               ).call(
                 cjs.exports,
                 cjs.exports,
