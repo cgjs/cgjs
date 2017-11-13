@@ -31,7 +31,7 @@
       case ARGV.some(arg => /^-v|--version$/.test(arg)):
         print(info.version);
         break;
-      default:
+      case ARGV.some(arg => /^-h|--help$/.test(arg)):
         const open = '\uD83C\uDF88', close = '\uD83C\uDF89';
         print(`
           \x1B[1m${info.name}\x1B[0m ${info.version} \x1B[2mby ${info.author.name || info.author}\x1B[0m
@@ -46,7 +46,12 @@
           options:  -d | --debug
                     -e | --eval 'some code'
                     -v | --version
+                    -h | --help
         `.replace(/^        /gm, ''));
+        break;
+      default:
+        print(`\x1B[1m${info.name}\x1B[0m ${info.version}`);
+        imports.console.interact();
         break;
     }
   }
