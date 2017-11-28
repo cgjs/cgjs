@@ -49,7 +49,7 @@ Following the list of core modules that are under development (contributors need
   - [ ] [crypto](https://nodejs.org/api/crypto.html) module as [@cgjs/crypto](https://github.com/cgjs/crypto)
   - [ ] [dns](https://nodejs.org/api/dns.html) module as [@cgjs/dns](https://github.com/cgjs/dns)
   - [x] [events](https://nodejs.org/api/events.html) module as [@cgjs/events](https://github.com/cgjs/events)
-  - [ ] [fs](https://nodejs.org/api/fs.html) module as [@cgjs/fs](https://github.com/cgjs/fs)
+  - [x] [fs](https://nodejs.org/api/fs.html) module as [@cgjs/fs](https://github.com/cgjs/fs)
   - [ ] [http](https://nodejs.org/api/http.html) module as [@cgjs/http](https://github.com/cgjs/http)
   - [ ] [http2](https://nodejs.org/api/http2.html) module as [@cgjs/http2](https://github.com/cgjs/http2)
   - [ ] [https](https://nodejs.org/api/https.html) module as [@cgjs/https](https://github.com/cgjs/https)
