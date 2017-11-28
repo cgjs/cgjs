@@ -16,7 +16,8 @@
     {name: 'timers'},
     {name: 'util'},
     {name: 'console', global: true},
-    {name: 'assert'}
+    {name: 'assert'},
+    {name: 'fs'}
   ].forEach(
     function (module) {
       const included = ['node_modules', '@cgjs', module.name].reduce(path, this);
