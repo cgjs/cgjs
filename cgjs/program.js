@@ -47,7 +47,7 @@
                     -e | --eval 'some code'
                     -v | --version
                     -h | --help
-        `.replace(/^        /gm, ''));
+        `.replace(/^ {8}/gm, ''));
         break;
       default:
         print(`\x1B[1m${info.name}\x1B[0m ${info.version}`);

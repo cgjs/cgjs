@@ -26,7 +26,9 @@
         case InfoType.FUNCTION:
           if (!test_.test(name) && python_case.test(name)) {
             let value;
-            try { value = Class[name]; } catch(o_O) {}
+            try { value = Class[name]; } catch(o_O) {
+              // nothing to do here
+            }
             if (value) {
               define(Class, camelize(name), Class[name]);
               descriptors[camelize(name)] = {

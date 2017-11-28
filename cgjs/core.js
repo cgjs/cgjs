@@ -35,7 +35,6 @@
             ${outside.get_path()}`
             .replace(/^\s+/gm, '')
           );
-          break;
       }
       if (module.global) {
         global[module.name] = require(module.name);
