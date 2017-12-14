@@ -47,12 +47,12 @@ Object.defineProperty(
           } else {
             const content = File.new_for_path(path).load_contents(null)[1];
             if (path.slice(-5) === '.json') {
-              cache[module] = JSON.parse(content);
+              cache[path] = JSON.parse(content);
             } else {
               const cjs = {exports: {}};
               const dirname = GLib.path_get_dirname(path);
               // avoid circular dependencies mess
-              cache[module] = cjs.exports;
+              cache[path] = cjs.exports;
               Function(
                 'exports',
                 'module',
@@ -68,10 +68,10 @@ Object.defineProperty(
                 dirname,
                 path
               );
-              cache[module] = cjs.exports;
+              cache[path] = cjs.exports;
             }
           }
-          return cache[module];
+          return cache[path];
         }
         return require;
       };
