@@ -44,7 +44,7 @@ Following the list of core modules that are under development (contributors need
   - [x] [assert](https://nodejs.org/api/assert.html) module as [@cgjs/assert](https://github.com/cgjs/assert)
   - [x] [buffer](https://nodejs.org/api/buffer.html) module as [@cgjs/buffer](https://github.com/cgjs/buffer)
   - [ ] [child_process](https://nodejs.org/api/child_process.html) module as [@cgjs/child_process](https://github.com/cgjs/child_process)
-  - [ ] [cluster](https://nodejs.org/api/cluster.html) module as [@cgjs/cluster](https://github.com/cgjs/cluster)
+  - [x] [cluster](https://nodejs.org/api/cluster.html) module as [@cgjs/cluster](https://github.com/cgjs/cluster)
   - [x] [console](https://nodejs.org/api/console.html) module as [@cgjs/console](https://github.com/cgjs/console)
   - [ ] [crypto](https://nodejs.org/api/crypto.html) module as [@cgjs/crypto](https://github.com/cgjs/crypto)
   - [ ] [dns](https://nodejs.org/api/dns.html) module as [@cgjs/dns](https://github.com/cgjs/dns)
