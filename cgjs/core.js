@@ -18,7 +18,8 @@
     {name: 'console', global: true},
     {name: 'assert'},
     {name: 'fs'},
-    {name: 'process', global: true}
+    {name: 'process', global: true},
+    {name: 'cluster'}
   ].forEach(
     function (module) {
       const included = ['node_modules', '@cgjs', module.name].reduce(path, this);

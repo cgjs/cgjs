@@ -31,6 +31,7 @@
   "dependencies": {
     "@cgjs/assert": "^0.0.1",
     "@cgjs/buffer": "^0.1.0",
+    "@cgjs/cluster": "0.0.1",
     "@cgjs/console": "^0.1.2",
     "@cgjs/events": "^0.1.0",
     "@cgjs/fs": "^0.0.1",
