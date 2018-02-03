@@ -35,11 +35,7 @@ cgjs --help
 
 ### CommonJS Modules
 
-By default, `cgjs` includes `require` but it does not have all other modules.
-
-To use other core modules, you need to install them a part via `npm install -g @cgjs/module`.
-
-Following the list of core modules that are under development (contributors needed/welcome) and their current status:
+By default, `cgjs` includes few core modules, and following you can check their current status:
 
   - [x] [assert](https://nodejs.org/api/assert.html) module as [@cgjs/assert](https://github.com/cgjs/assert)
   - [x] [buffer](https://nodejs.org/api/buffer.html) module as [@cgjs/buffer](https://github.com/cgjs/buffer)
@@ -72,9 +68,6 @@ Following the list of core modules that are under development (contributors need
   - [ ] [vm](https://nodejs.org/api/vm.html) module as [@cgjs/vm](https://github.com/cgjs/vm)
   - [ ] [zlib](https://nodejs.org/api/zlib.html) module as [@cgjs/zlib](https://github.com/cgjs/zlib)
 
-### Where is the `process` ?
-
-Unfortunately, having a 1:1 NodeJS behavior with `process` is not as trivial as it looks like as soon as [@cgjs/process](https://github.com/cgjs/process) will be usable I'll ship it together with the core.
 
 ### Basic GJS info
 
