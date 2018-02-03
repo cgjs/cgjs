@@ -27,7 +27,7 @@ Object.defineProperty(
       const cache = Object.create(null);
 
       const fileType = file => file.query_file_type(FileQueryInfoFlags.NONE, null);
-      const createRequire = base => {
+      const createRequire = (base, parent) => {
         require.cache = cache;
         require.register = register;
         require.resolve = resolve.bind(null, base);
@@ -49,7 +49,12 @@ Object.defineProperty(
             if (path.slice(-5) === '.json') {
               cache[path] = JSON.parse(content);
             } else {
-              const cjs = {exports: {}};
+              const cjs = {
+                exports: {},
+                filename: path,
+                loaded: false,
+                parent: parent
+              };
               const dirname = GLib.path_get_dirname(path);
               // avoid circular dependencies mess
               cache[path] = cjs.exports;
@@ -64,11 +69,12 @@ Object.defineProperty(
                 cjs.exports,
                 cjs.exports,
                 cjs,
-                createRequire(dirname),
+                createRequire(dirname, cjs),
                 dirname,
                 path
               );
               cache[path] = cjs.exports;
+              cjs.loaded = true;
             }
           }
           return cache[path];
@@ -157,7 +163,7 @@ Object.defineProperty(
         return path;
       }
 
-      return createRequire(process.cwd());
+      return createRequire(process.cwd(), null);
 
     })(imports.gi)
   }
