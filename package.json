@@ -36,8 +36,8 @@
     "@cgjs/fs": "^0.0.1",
     "@cgjs/os": "^0.1.0",
     "@cgjs/path": "^0.1.0",
-    "@cgjs/process": "0.0.1",
-    "@cgjs/timers": "0.0.1",
+    "@cgjs/process": "^0.0.2",
+    "@cgjs/timers": "^0.0.1",
     "@cgjs/util": "^0.1.0"
   }
 }

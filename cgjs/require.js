@@ -16,7 +16,6 @@ Object.defineProperty(
       const FileType = Gio.FileType;
       const FileQueryInfoFlags = Gio.FileQueryInfoFlags;
 
-      const process = imports.cgjs.process;
       const {
         CORE_MODULES,
         DEBUG,
@@ -153,7 +152,7 @@ Object.defineProperty(
             if (path) return path;
           }
         } while(dir.has_parent(null) && (dir = dir.get_parent()));
-        process.env.NODE_PATH.split(':').some(folder => {
+        GLib.getenv('NODE_PATH').split(':').some(folder => {
           if (folder.length) {
             dir = File.new_for_path(folder);
             path = loadAsFile(dir, module) || loadAsDirectory(dir);
@@ -163,7 +162,7 @@ Object.defineProperty(
         return path;
       }
 
-      return createRequire(process.cwd(), null);
+      return createRequire(GLib.get_current_dir(), null);
 
     })(imports.gi)
   }

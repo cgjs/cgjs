@@ -1,6 +1,5 @@
 (gi => {
   /*! (c) 2017 Andrea Giammarchi - @WebReflection (ISC) */
-  const process = imports.cgjs.process;
   if (
     // cgjs file.js
     process.argv.some((arg, i) => {
