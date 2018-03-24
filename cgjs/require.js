@@ -64,6 +64,7 @@ Object.defineProperty(
                 '__dirname',
                 '__filename',
                 content.toString().replace(/^#!.+[\r\n]+/, '')
+                  + '\n//# sourceURL=' + path
               ).call(
                 cjs.exports,
                 cjs.exports,
