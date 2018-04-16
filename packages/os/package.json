@@ -1,0 +1,33 @@
+{
+  "name": "@cgjs/os",
+  "version": "0.1.0",
+  "description": "os core module for cgjs",
+  "scripts": {
+    "test": "cgjs ./test"
+  },
+  "keywords": [
+    "gjs",
+    "require",
+    "commonjs",
+    "npm",
+    "node",
+    "gtk",
+    "native",
+    "cgjs",
+    "os"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgjs/os.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cgjs/os/issues"
+  },
+  "homepage": "https://github.com/cgjs/os#readme",
+  "devDependencies": {
+    "cgjs": "^0.1.14"
+  }
+}
