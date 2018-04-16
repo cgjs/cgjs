@@ -5,7 +5,7 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
 
   /*! ISC License
    * 
-   * Copyright (c) 2017, Andrea Giammarchi, @WebReflection
+   * Copyright (c) 2017-2018, Andrea Giammarchi, @WebReflection
    * 
    * Permission to use, copy, modify, and/or distribute this software for any
    * purpose with or without fee is hereby granted, provided that the above
@@ -70,7 +70,6 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   // basic utility for this scope
   function getProgramDir(programFile) {
     const info = programFile.query_info('standard::', Gio.FileQueryInfoFlags.NOFOLLOW_SYMLINKS, null);
-
     if (info.get_is_symlink()) {
       const symlinkFile = programFile.get_parent().resolve_relative_path(info.get_symlink_target());
       return symlinkFile.get_parent();
