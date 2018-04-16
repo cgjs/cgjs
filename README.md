@@ -74,3 +74,11 @@ By default, `cgjs` includes few core modules, and following you can check their 
 You can install globally the [cgjs-about](https://github.com/cgjs/cgjs-about) utility and query it as described in the repository.
 
 Together with `grep` it's a great way to have a quick overview of every namespace.
+
+#### APIs
+
+  * [Gnome API Reference](https://developer.gnome.org/references) for GJS and Gtk internals
+  * [NodeJS API Reference](https://nodejs.org/api/documentation.html)
+  * [GJS Examples](https://gitlab.gnome.org/GNOME/gjs/tree/master/examples)
+  * [gjs-examples](https://github.com/optimisme/gjs-examples)
+  * [gjs-gtk-examples](https://github.com/Programmica/gjs-gtk-examples)
