@@ -19,14 +19,9 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cgjs/process.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cgjs/process/issues"
-  },
-  "homepage": "https://github.com/cgjs/process#readme",
+  "repository": "github:cgjs/cgjs",
+  "bugs": "https://github.com/cgjs/cgjs/issues",
+  "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/process#readme",
   "devDependencies": {
     "cgjs": "^0.1.9"
   }

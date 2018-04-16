@@ -20,13 +20,8 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "main": "cg.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cgjs/cgjs.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cgjs/cgjs/issues"
-  },
+  "repository": "github:cgjs/cgjs",
+  "bugs": "https://github.com/cgjs/cgjs/issues",
   "homepage": "https://github.com/cgjs/cgjs#readme",
   "dependencies": {
     "@cgjs/assert": "~0.0.1",

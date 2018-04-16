@@ -19,14 +19,9 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cgjs/util.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cgjs/util/issues"
-  },
-  "homepage": "https://github.com/cgjs/util#readme",
+  "repository": "github:cgjs/cgjs",
+  "bugs": "https://github.com/cgjs/cgjs/issues",
+  "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/util#readme",
   "devDependencies": {
     "cgjs": "^0.1.8"
   }
