@@ -1,0 +1,25 @@
+{
+  "extends": "eslint:recommended",
+  "globals": {
+    "ARGV": true,
+    "Int8Array": true,
+    "Int16Array": true,
+    "Int32Array": true,
+    "Intl": true,
+    "Map": true,
+    "Promise": true,
+    "Proxy": true,
+    "Set": true,
+    "Uint8Array": true,
+    "Uint8ClampedArray": true,
+    "Uint16Array": true,
+    "Uint32Array": true,
+    "WeakMap": true,
+    "WeakSet": true,
+    "imports": true
+  },
+  "rules": {
+    "no-case-declarations": 0,
+    "no-fallthrough": 0
+  }
+}
