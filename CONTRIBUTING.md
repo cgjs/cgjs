@@ -11,6 +11,8 @@ As example, `process` needs also `os` and `stream` to work properly with its `st
 
 However, every contribution to improve with tests or code any of the core module would be appreciated, and any _npm_ module that uses cgjs as executable would be awesomely welcomed too!
 
+CGJS project uses a [monorepo approach](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) to structure its code and [lerna](https://github.com/lerna/lerna) to manage its packages.
+
 ### Base Core Module Structure
 
 You can check [timers](https://github.com/cgjs/cgjs/tree/master/packages/timers), [console](https://github.com/cgjs/cgjs/tree/master/packages/console), or [utils](https://github.com/cgjs/cgjs/tree/master/packages/utils) core modules to have a quick view on how these are structured.
@@ -43,8 +45,6 @@ This is needed to both avoid duplicated core modules and to make loading core mo
 ### Extra Core Utilities
 
 Maybe useful to help developing core modules is the `imports.cgjs.constants` object or the `imports.cgjs.process`.
-
-https://github.com/cgjs/cgjs/blob/master/packages/cgjs/cg.js#L34
 
 Constants are defined in [cg.js](https://github.com/cgjs/cgjs/blob/master/packages/cgjs/cg.js#L34) while `process` is a very essential
 object with the following methods: `cwd()`, `argv()`, ed `env`.
