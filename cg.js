@@ -70,10 +70,16 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   function getProgramDir(dir) {
     switch (dir.get_basename()) {
       case 'bin':
-        return ['lib', 'node_modules', 'cgjs'].reduce(
-          (dir, path) => dir.resolve_relative_path(path),
-          dir.get_parent()
-        );
+        dir = dir.get_parent();
+        return dir.get_basename() === '.yarn' ?
+          ['.config', 'yarn', 'global', 'node_modules', 'cgjs'].reduce(
+            (dir, path) => dir.resolve_relative_path(path),
+            dir.get_parent()
+          ) :
+          ['lib', 'node_modules', 'cgjs'].reduce(
+            (dir, path) => dir.resolve_relative_path(path),
+            dir
+          );
       case '.bin':
         return dir.get_parent().resolve_relative_path('cgjs');
       default:
