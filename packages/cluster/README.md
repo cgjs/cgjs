@@ -1,6 +1,6 @@
 # @cgjs/cluster [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
 
-cluster core module for cgjs
+cluster core module for [cgjs](https://github.com/cgjs/cgjs)
 
 ### How doe it work ?
 

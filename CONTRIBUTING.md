@@ -15,6 +15,12 @@ However, every contribution to improve with tests or code any of the core module
 
 You can check [timers](https://github.com/cgjs/cgjs/tree/master/packages/timers), [console](https://github.com/cgjs/cgjs/tree/master/packages/console), or [utils](https://github.com/cgjs/cgjs/tree/master/packages/utils) core modules to have a quick view on how these are structured.
 
+#### APIs
+
+  * [Gnome API Reference](https://developer.gnome.org/references) for GJS and Gtk internals
+  * [NodeJS API Reference](https://nodejs.org/api/documentation.html)
+  * [GJS Examples](https://github.com/optimisme/gjs-examples)
+
 #### About Dependencies
  `cgjs` and eventually other core modules should never be a dependency but rather a **devDependecy**, as it is as example for [console](https://github.com/cgjs/cgjs/blob/master/packages/console/package.json#L25).
 
