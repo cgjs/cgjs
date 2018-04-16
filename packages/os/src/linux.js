@@ -1,3 +1,4 @@
+const createSubnet = require('./createSubnet');
 const system = require('./system.js');
 const EOL = /\r\n|\n/;
 
@@ -83,7 +84,7 @@ function parseInterfaces(info) {
     }
   }
   if (mac) this[info.slice(0, info.indexOf(':'))] = iface;
-}
+};
 
 this.totalmem = () => {
   let I, mem = system('free -b').split(EOL);
@@ -96,14 +97,3 @@ this.uptime = () => (
   Date.parse(system('uptime -s').replace(' ', 'T'))
 ) / 1000;
 
-function createSubnet(size, segment, base, sep) {
-  const empty = '0'.repeat(size);
-  return  mask => {
-    const str = ('1'.repeat(parseInt(mask, 10)) + empty).slice(0, size);
-    const out = [];
-    for (let i = 0; i < size; i += segment) {
-      out.push(parseInt(str.substr(i, segment), 2).toString(base));
-    }
-    return out.join(sep);
-  };
-}

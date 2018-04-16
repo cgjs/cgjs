@@ -32,7 +32,7 @@ assert.deepEqual = (actual, expected, message) => {
 assert.deepStrictEqual = assert.deepEqual;
 
 assert.doesNotThrow = (block, error, message) => {
-  try { block() } catch(o_O) {
+  try { block(); } catch(o_O) {
     throw message ? new Error(message) : o_O;
   }
 };

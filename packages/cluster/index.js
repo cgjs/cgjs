@@ -9,7 +9,8 @@ const cluster = {
   isWorker: !!process.env._CGJS_WORKER,
   workers: {},
   tmp: {},
-  disconnect(callback) {
+  // FIXME callback isn't called
+  disconnect(callback) { // eslint-disable-line no-unused-vars
     Object.keys(cluster.workers).forEach(id => {
       cluster.workers[id].disconnect();
     });
@@ -24,7 +25,7 @@ const cluster = {
     const closeTMP = () => {
       monitor.cancel();
       GLib.close(tmp);
-    }
+    };
     const env = Object.assign(
       {_CGJS_WORKER: tmp[1]},
       process.env
@@ -32,7 +33,8 @@ const cluster = {
     const filename = module.parent.filename;
     const [
       ok, pid,
-      stdin, stdout, stderr
+      // TODO stdin and stderr
+      stdin, stdout, stderr // eslint-disable-line no-unused-vars
     ] = GLib.spawn_async_with_pipes(
       GLib.path_get_dirname(filename),
       [

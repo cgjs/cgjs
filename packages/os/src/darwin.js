@@ -1,9 +1,12 @@
+const createSubnet = require('./createSubnet');
 const system = require('./system.js');
 const EOL = /\r\n|\n/;
 const NOMAC = '00:00:00:00:00:00';
 
+const getIPv6Subnet = createSubnet(128, 16, 16, ':');
+
 this.cpus = () => {
-  const cores = parseFloat(system('sysctl -n hw.ncpu'));
+  let cores = parseFloat(system('sysctl -n hw.ncpu'));
   const cpus = [];
   while (cores--) {
     cpus.push({
@@ -119,4 +122,4 @@ function parseInterfaces(info) {
     }
   }
   this[info.slice(0, info.indexOf(':'))] = iface;
-}
+};

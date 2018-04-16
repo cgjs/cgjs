@@ -17,3 +17,11 @@ const obj3 = {
 };
 
 assert.deepEqual(obj1, obj3);
+
+let error;
+try {
+  assert.deepEqual(obj1, obj2);
+} catch (err) {
+  error = err;
+}
+assert(error);
