@@ -1,0 +1,34 @@
+{
+  "name": "@cgjs/console",
+  "version": "0.1.2",
+  "description": "console core module for cgjs",
+  "scripts": {
+    "test": "cgjs ./test"
+  },
+  "keywords": [
+    "gjs",
+    "require",
+    "commonjs",
+    "npm",
+    "node",
+    "gtk",
+    "native",
+    "cgjs",
+    "console"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgjs/console.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cgjs/console/issues"
+  },
+  "homepage": "https://github.com/cgjs/console#readme",
+  "devDependencies": {
+    "@cgjs/util": "^0.1.0",
+    "cgjs": "^0.1.8"
+  }
+}
