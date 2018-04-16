@@ -6,7 +6,7 @@
     "cgjs": "cg.js"
   },
   "scripts": {
-    "test": "./cg.js && echo $(tput bold)'  OK'$(tput sgr0) && echo ''"
+    "test": "./cg.js -e 'process.exit(0)'  && echo $(tput bold)'  OK'$(tput sgr0) && echo ''"
   },
   "keywords": [
     "gjs",
