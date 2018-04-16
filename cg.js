@@ -23,11 +23,12 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   gi.versions.Gtk = '3.0';
 
   const GLib = gi.GLib;
-  const File = gi.Gio.File;
+  const Gio = gi.Gio;
+  const File = Gio.File;
   const CURRENT_DIR = GLib.get_current_dir();
   const PROGRAM_EXE = File.new_for_path(CURRENT_DIR)
                           .resolve_relative_path(imports.system.programInvocationName);
-  const PROGRAM_DIR = getProgramDir(PROGRAM_EXE.get_parent()).get_path();
+  const PROGRAM_DIR = getProgramDir(PROGRAM_EXE).get_path();
 
   // append project folder (needed to imports.cgjs)
   imports.searchPath.push(PROGRAM_DIR);
@@ -67,23 +68,14 @@ Function=Function//; for a in "$@"; do if [ "$a" = "-d" ] || [ "$a" = "--debug" 
   ].forEach(resource => imports.cgjs[resource]);
 
   // basic utility for this scope
-  function getProgramDir(dir) {
-    switch (dir.get_basename()) {
-      case 'bin':
-        dir = dir.get_parent();
-        return dir.get_basename() === '.yarn' ?
-          ['.config', 'yarn', 'global', 'node_modules', 'cgjs'].reduce(
-            (dir, path) => dir.resolve_relative_path(path),
-            dir.get_parent()
-          ) :
-          ['lib', 'node_modules', 'cgjs'].reduce(
-            (dir, path) => dir.resolve_relative_path(path),
-            dir
-          );
-      case '.bin':
-        return dir.get_parent().resolve_relative_path('cgjs');
-      default:
-        return dir;
+  function getProgramDir(programFile) {
+    const info = programFile.query_info('standard::', Gio.FileQueryInfoFlags.NOFOLLOW_SYMLINKS, null);
+
+    if (info.get_is_symlink()) {
+      const symlinkFile = programFile.get_parent().resolve_relative_path(info.get_symlink_target());
+      return symlinkFile.get_parent();
+    } else {
+      return programFile.get_parent();
     }
   }
 
