@@ -1,4 +1,4 @@
-const { Gio } = imports.gi;
+const { Gio, GLib } = imports.gi;
 
 const { Buffer } = require('buffer');
 
@@ -72,8 +72,27 @@ function readFileSync(path, options = { encoding: null, flag: 'r' }) {
   return data.toString(encoding);
 }
 
+// TODO: mode
+function mkdirSync(path, mode = 0o777) {
+  if (GLib.mkdir_with_parents(path, mode) !== 0) {
+    // TODO: throw a better error
+    throw new Error(`failed to make ${path} directory`);
+  }
+}
+
+function rmdirSync(path) {
+  const result = GLib.rmdir(path)
+
+  if (result !== 0) {
+    // TODO: throw a better error
+    throw new Error(`failed to remove ${path} directory`);
+  }
+}
+
 module.exports = {
   existsSync,
   readdirSync,
   readFileSync,
+  mkdirSync,
+  rmdirSync
 };
