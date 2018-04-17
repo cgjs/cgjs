@@ -121,7 +121,7 @@ const $inspect = (obj, tab, wm, how, d) => {
                 inspectBuffer(obj, tab + 1, wm, how, d + 1) :
                 colored('[Buffer]', CYAN, how);
             case obj instanceof RegExp:
-              return colored(regExp(ob), RED, how);
+              return colored(regExp(obj), RED, how);
             case obj instanceof Date:
               return colored(JSON.stringify(obj), MAGENTA, how);
             default:
@@ -129,7 +129,6 @@ const $inspect = (obj, tab, wm, how, d) => {
                 inspectObject(obj, tab + 1, wm, how, d + 1) :
                 colored('[Object]', CYAN, how);
           }
-          break;
       }
     case 'string':
       return colored(JSON.stringify(obj), GREEN, how);
