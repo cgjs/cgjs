@@ -1,4 +1,5 @@
 const MODULE = require('../index');
+const assert = require('assert')
 
 function checkExistsSync() {
   const existingFiles = ['index.js', 'test', 'test/index.js'];
@@ -50,6 +51,22 @@ function checkReadFileSync() {
   }
 }
 
+function checkMkdirSyncRmdirSync() {
+  const path = './foobar'
+
+  MODULE.mkdirSync(path)
+
+  if (!MODULE.existsSync(path)) {
+    throw new Error(`${path} should exists`);
+  }
+
+  MODULE.rmdirSync('./foobar')
+
+  if (MODULE.existsSync(path)) {
+    throw new Error(`${path} should not exists`);
+  }
+}
+
 if (!Object.keys(MODULE).length) {
   throw new Error('MODULE was not exported');
 }
@@ -57,3 +74,4 @@ if (!Object.keys(MODULE).length) {
 checkExistsSync();
 checkReaddirSync();
 checkReadFileSync();
+checkMkdirSyncRmdirSync();
