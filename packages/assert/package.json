@@ -1,0 +1,28 @@
+{
+  "name": "@cgjs/assert",
+  "version": "0.0.1",
+  "description": "assert core module for cgjs",
+  "scripts": {
+    "test": "cgjs ./test"
+  },
+  "keywords": [
+    "gjs",
+    "require",
+    "commonjs",
+    "npm",
+    "node",
+    "gtk",
+    "native",
+    "cgjs",
+    "assert"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": "github:cgjs/cgjs",
+  "bugs": "https://github.com/cgjs/cgjs/issues",
+  "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/assert#readme",
+  "devDependencies": {
+    "cgjs": "^0.1.15"
+  }
+}

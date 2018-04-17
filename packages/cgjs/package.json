@@ -1,0 +1,39 @@
+{
+  "name": "cgjs",
+  "version": "0.1.27",
+  "description": "A CommonJS Runtime for GJS",
+  "bin": {
+    "cgjs": "cg.js"
+  },
+  "scripts": {
+    "test": "./cg.js -e 'process.exit(0)'  && echo $(tput bold)'  OK'$(tput sgr0) && echo ''"
+  },
+  "keywords": [
+    "gjs",
+    "require",
+    "commonjs",
+    "npm",
+    "node",
+    "gtk",
+    "native"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "main": "cg.js",
+  "repository": "github:cgjs/cgjs",
+  "bugs": "https://github.com/cgjs/cgjs/issues",
+  "homepage": "https://github.com/cgjs/cgjs#readme",
+  "dependencies": {
+    "@cgjs/assert": "~0.0.1",
+    "@cgjs/buffer": "~0.1.0",
+    "@cgjs/cluster": "~0.0.1",
+    "@cgjs/console": "~0.1.2",
+    "@cgjs/events": "~0.1.0",
+    "@cgjs/fs": "~0.0.1",
+    "@cgjs/os": "~0.1.0",
+    "@cgjs/path": "~0.1.0",
+    "@cgjs/process": "~0.0.3",
+    "@cgjs/timers": "~0.0.1",
+    "@cgjs/util": "~0.1.0"
+  }
+}
