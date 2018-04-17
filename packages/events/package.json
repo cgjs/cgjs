@@ -24,5 +24,8 @@
   "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/events#readme",
   "devDependencies": {
     "cgjs": "^0.1.12"
+  },
+  "dependencies": {
+    "events": "^2.0.0"
   }
 }
