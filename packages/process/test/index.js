@@ -1,5 +1,6 @@
 const process = global.process || require('../index');
 const console = require('console');
+const assert = require('assert')
 
 process.on('exit', code => console.log('bye bye: ' + code));
 
@@ -15,3 +16,5 @@ Object.keys(process).forEach(key => {
 });
 
 process.nextTick(process.exit, 0);
+
+assert.deepEqual(process.argv.splice(2),  ["--foo", "bar"])

@@ -7,7 +7,7 @@ const System = imports.system;
 const TIME = Date.now();
 const EventEmitter = require('events').EventEmitter;
 
-const lazy = (key, value) => 
+const lazy = (key, value) =>
   Object.defineProperty(process, key, {
     enumerable: true,
     value: value
@@ -31,6 +31,8 @@ const process = Object.defineProperties(
               File.new_for_path(arg).get_path() :
               arg
           );
+        } else {
+          arr.push(arg)
         }
       });
       return lazy('argv', arr);
