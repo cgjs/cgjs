@@ -81,7 +81,7 @@ function mkdirSync(path, mode = 0o777) {
 }
 
 function rmdirSync(path) {
-  const result = GLib.rmdir(path)
+  const result = GLib.rmdir(path);
 
   if (result !== 0) {
     // TODO: throw a better error

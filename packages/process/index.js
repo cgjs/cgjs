@@ -32,7 +32,7 @@ const process = Object.defineProperties(
               arg
           );
         } else {
-          arr.push(arg)
+          arr.push(arg);
         }
       });
       return lazy('argv', arr);
