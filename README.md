@@ -1,4 +1,4 @@
-# cgjs [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
+# cgjs [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC) [![Build Status](https://travis-ci.org/cgjs/cgjs.svg?branch=master)](https://travis-ci.org/cgjs/cgjs)
 
 A CommonJS Runtime for [GJS](https://gitlab.gnome.org/GNOME/gjs/wikis/Home)
 
