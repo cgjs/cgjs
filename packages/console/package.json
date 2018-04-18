@@ -1,6 +1,6 @@
 {
   "name": "@cgjs/console",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "console core module for cgjs",
   "scripts": {
     "test": "cgjs ./test"
@@ -23,7 +23,7 @@
   "bugs": "https://github.com/cgjs/cgjs/issues",
   "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/console#readme",
   "devDependencies": {
-    "@cgjs/util": "^0.1.0",
-    "cgjs": "^0.1.8"
+    "@cgjs/util": "^0.1.1",
+    "cgjs": "^0.1.28"
   }
 }

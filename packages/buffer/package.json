@@ -1,6 +1,6 @@
 {
   "name": "@cgjs/buffer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "buffer core module for cgjs",
   "scripts": {
     "test": "cgjs ./test"
@@ -23,7 +23,7 @@
   "bugs": "https://github.com/cgjs/cgjs/issues",
   "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/buffer#readme",
   "devDependencies": {
-    "cgjs": "^0.1.13"
+    "cgjs": "^0.1.28"
   },
   "dependencies": {
     "buffer": "^5.0.8"

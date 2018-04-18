@@ -1,6 +1,6 @@
 {
   "name": "@cgjs/fs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "fs core module for cgjs",
   "scripts": {
     "test": "cgjs ./test"
@@ -23,6 +23,6 @@
   "bugs": "https://github.com/cgjs/cgjs/issues",
   "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/fs#readme",
   "devDependencies": {
-    "cgjs": "^0.1.9"
+    "cgjs": "^0.1.28"
   }
 }

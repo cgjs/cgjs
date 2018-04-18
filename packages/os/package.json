@@ -1,6 +1,6 @@
 {
   "name": "@cgjs/os",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "os core module for cgjs",
   "scripts": {
     "test": "cgjs ./test"
@@ -23,6 +23,6 @@
   "bugs": "https://github.com/cgjs/cgjs/issues",
   "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/os#readme",
   "devDependencies": {
-    "cgjs": "^0.1.14"
+    "cgjs": "^0.1.28"
   }
 }
