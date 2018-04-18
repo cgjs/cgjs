@@ -1,8 +1,11 @@
+sudo: false
+addons:
+  apt:
+    packages:
+    - gjs
 language: node_js
 node_js:
   - stable
-script:
-  - npm run lint
 git:
   depth: 1
 branches:
