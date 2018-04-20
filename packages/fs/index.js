@@ -88,6 +88,10 @@ function rmdirSync(path) {
   }
 }
 
+function unlinkSync(path) {
+  GLib.unlink(path);
+}
+
 function writeFileSync(path, data) {
   GLib.file_set_contents(path, data);
 }
@@ -105,5 +109,6 @@ module.exports = {
   writeFileSync,
   mkdirSync,
   rmdirSync,
+  unlinkSync,
   watch
 };
