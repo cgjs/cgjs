@@ -74,3 +74,16 @@ checkExistsSync();
 checkReaddirSync();
 checkReadFileSync();
 checkMkdirSyncRmdirSync();
+
+const watch = require('path').join(__dirname, 'watch.js');
+MODULE.writeFileSync(watch, 'test');
+const watcher = MODULE.watch(watch, {persistent: true}, console.log);
+watcher
+  .on('change', console.log)
+  .on('rename', console.log);
+
+setTimeout(() => { watcher.close(); }, 1000);
+
+setTimeout(() => {
+  MODULE.writeFileSync(watch, 'test more');
+}, 100);

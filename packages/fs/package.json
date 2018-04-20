@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "fs core module for cgjs",
   "scripts": {
-    "test": "cgjs ./test"
+    "test": "../cgjs/cg.js ./test"
   },
   "keywords": [
     "gjs",

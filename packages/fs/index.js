@@ -72,7 +72,6 @@ function readFileSync(path, options = { encoding: null, flag: 'r' }) {
   return data.toString(encoding);
 }
 
-// TODO: mode
 function mkdirSync(path, mode = 0o777) {
   if (GLib.mkdir_with_parents(path, mode) !== 0) {
     // TODO: throw a better error
@@ -89,10 +88,22 @@ function rmdirSync(path) {
   }
 }
 
+function writeFileSync(path, data) {
+  GLib.file_set_contents(path, data);
+}
+
+const FSWatcher = require('./fs-watcher');
+function watch(filename, options, listener) {
+  return new FSWatcher(filename, options, listener);
+}
+
 module.exports = {
+  FSWatcher,
   existsSync,
   readdirSync,
   readFileSync,
+  writeFileSync,
   mkdirSync,
-  rmdirSync
+  rmdirSync,
+  watch
 };

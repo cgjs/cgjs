@@ -1,21 +1,27 @@
-(counter => {
-  /*! (c) 2017 Andrea Giammarchi - @WebReflection (ISC) */
+(() => {
+  /*! (c) 2017-2018 Andrea Giammarchi - @WebReflection (ISC) */
   const mainloop = imports.mainloop;
-  const holder = imports.gi.GLib.MainLoop.new(null, false);
   const IDLE = imports.cgjs.constants.IDLE;
 
-  const id = mainloop.timeout_add(IDLE, () => {
-    if (0 < counter) return true;
-    if (holder.is_running()) holder.quit();
-    return false;
-  });
+  let running = false;
+  let counter = 0;
 
   this.run = () => {
-    if (!holder.is_running() && 0 < counter) holder.run();
+    if (!running && 0 < counter) {
+      running = true;
+      mainloop.timeout_add(IDLE, () => {
+        if (0 < counter) return true;
+        this.quit();
+      });
+      mainloop.run();
+    }
   };
+
   this.quit = () => {
-    if (holder.is_running()) holder.quit();
-    mainloop.source_remove(id);
+    if (running) {
+      running = false;
+      mainloop.quit();
+    }
   };
 
   this.go = () => --counter;
@@ -29,4 +35,4 @@
     });
   };
 
-})(0);
+})();
