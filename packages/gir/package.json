@@ -1,0 +1,25 @@
+{
+  "name": "@cgjs/gir",
+  "version": "0.0.1",
+  "description": "gir core module for cgjs",
+  "scripts": {
+    "test": "../cgjs/cg.js -e 'process.exit(typeof require(`gir`).Gtk.initCheck === `function` ? 0 : 1)'"
+  },
+  "keywords": [
+    "gjs",
+    "require",
+    "commonjs",
+    "npm",
+    "node",
+    "gtk",
+    "native",
+    "cgjs",
+    "gir"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": "github:cgjs/cgjs",
+  "bugs": "https://github.com/cgjs/cgjs/issues",
+  "homepage": "https://github.com/cgjs/cgjs/tree/master/packages/assert#readme"
+}
