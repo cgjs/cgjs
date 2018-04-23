@@ -9,6 +9,7 @@
   const define = (where, name, value) =>
     Object.defineProperty(where, name, {configurable: true, value})[name];
   const camelize = name => name.replace(/_([a-z])/g, ($0, $1) => $1.toUpperCase());
+  const lowerize = name => name.replace(/([a-z])([A-Z])/g, '$1_$2').toLowerCase();
   const camelPatch = Namespace => {
     const facade = {};
     const descriptors = {};
@@ -45,7 +46,16 @@
           break;
       }
     }
-    return Object.defineProperties(facade, descriptors);
+    return new Proxy(
+      Object.defineProperties(facade, descriptors),
+      {
+        get(target, name) {
+          return target.hasOwnProperty(name) ?
+                  target[name] :
+                  (target[name] = Class[name] || Class[lowerize(name)]);
+        }
+      }
+    );
   };
   const classPatch = (Class) => {
     if (!patched.has(Class)) {

@@ -7,7 +7,7 @@ A CommonJS Runtime for [GJS](https://gitlab.gnome.org/GNOME/gjs/wikis/Home)
 Differently from [jsgtk](https://github.com/WebReflection/jsgtk), this project has the following goals and features:
 
   * 100% based on GJS. No wrapping, no runtime transpilation, pure ECMAScript 2015+ via SpiderMonkey 52+
-  * Gtk _camelCase_ methods are provided only on demand and if needed. You are free to `require('Gtk')`, which will add _camelCase_ method, or just regular GJS `imports.gi.Gtk`, suggested to develop core modules too.
+  * Gtk _camelCase_ methods are provided only on demand and if needed. You are free to `require('gir').Gtk`, which will add _camelCase_ method, or just regular GJS `imports.gi.Gtk`, suggested to develop core modules too.
   * by default, the core brings in only most basic features to develop CommonJS modules for GJS:
     * a `global` reference to the shared global GJS object
     * globally available timers such `setImmediate(fn, ...args)`, `setInterval(fn, delay, ...args)`, `setTimeout(fn, delay, ...args)` with also their `clearImmediate/Interval/Timeout(id)` counter functions
